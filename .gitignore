@@ -1,5 +1,4 @@
 # compiled output
-client/src
 dist
 node_modules
 
