@@ -5,5 +5,4 @@ metadata:
 spec:
   containers:
     - name: posts
-      image: sangjs/posts:0.0.1
-      imagePullPolicy: Never
+      image: sangjs/posts:0.0.1 
