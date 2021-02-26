@@ -23,7 +23,7 @@ export class AppService {
       title,
     };
     await this.httpService
-      .post('http://localhost:4005/events', {
+      .post('http://event-bus-srv:4005/events', {
         type: 'PostCreated',
         data: { id, title },
       })
