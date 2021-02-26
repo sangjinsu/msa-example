@@ -18,20 +18,17 @@ export class AppService {
       .post('http://posts-clusterip-srv:4000/events', event)
       .toPromise()
       .catch((err) => console.log(err.message));
-
-    /**
     this.httpService
-      .post('http://localhost:4001/events', event)
+      .post('http://comments-srv:4001/events', event)
       .toPromise()
       .catch((err) => console.log(err.message));
     this.httpService
-      .post('http://localhost:4002/events', event)
+      .post('http://query-srv:4002/events', event)
       .toPromise()
       .catch((err) => console.log(err.message));
     this.httpService
-      .post('http://localhost:4003/events', event)
+      .post('http://moderation-srv:4003/events', event)
       .toPromise()
       .catch((err) => console.log(err.message));
-     */
   }
 }
