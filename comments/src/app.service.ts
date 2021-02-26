@@ -29,7 +29,7 @@ export class AppService {
     comments.push({ id: commentId, content, status: 'pending' });
     this.commentsByPostId[id] = comments;
     await this.httpService
-      .post('http://localhost:4005/events', {
+      .post('http://event-bus-srv:4005/events', {
         type: 'CommentCreated',
         data: {
           id: commentId,
@@ -51,7 +51,7 @@ export class AppService {
       const comment = comments.find((comment) => comment.id === id);
       comment.status = status;
       this.httpService
-        .post('http://localhost:4005/events', {
+        .post('http://evnet-bus-srv:4005/events', {
           type: 'CommentUpdated',
           data: {
             id,

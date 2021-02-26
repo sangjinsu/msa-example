@@ -57,7 +57,7 @@ export class AppService {
 
   fetchEvents = async () => {
     const res = await this.httpService
-      .get('http://localhost:4005/events')
+      .get('http://event-bus-srv:4005/events')
       .toPromise();
     for (const event of res.data) {
       console.log('Processing event: ', event.type);
